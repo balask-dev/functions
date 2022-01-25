@@ -1,0 +1,135 @@
+FUNCTIONS :
+
+1. Add all number in an array
+
+const a = [1, 2, 3, 4];
+let z = 0;
+for (let i=0;i<a.length;i++){
+    z += a[i];
+}
+console.log(z);
+----------------------------------------------------------
+
+2.Remove duplicate in a array
+let a = ['A','B','A','C','B'];
+let z = a.filter((c,d) => {
+    return a.indexOf(c) === d;
+});
+console.log(z);
+----------------------------------------------------------
+
+3.print odd numbers in array
+var a = [1,2,3,4,5,6];
+var odd= function(a) {
+    for (var i=0;i<a.length;i++) {
+       if ((a[i] % 2) == 1) {
+          console.log(a[i]);
+          }
+    }
+ };
+console.log(odd(a))
+----------------------------------------------------------
+
+4.Return all the prime numbers in an array
+var a = [1,2,3,4,5,6,7]
+var prime = [];
+function Prime(n) {
+    var z = n / 2;
+      for (var i = 2; i <= z; i++) {
+       if ((n % i) == 0) {
+        return false;
+       } 
+     }
+     return true;
+}
+for (var i = 0; i < a.length; i++) {
+  if (Prime(a[i])) {
+      prime.push(a[i])
+  }
+}
+
+console.log(prime);
+----------------------------------------------------------
+
+5.Return all the palindromes in an array
+var a=['level','racecar','beeb','jeep','blb']
+ var arr = [];
+var str = a.slice(0);
+var z = str.toString().split("").reverse().join("").split(",");
+for(let i = 0;i<a.length;i++) {
+  for (let k=0;k<z.length;k++) {
+    if(a[i] == z[k]) {
+      arr.push(a[i])
+    }
+  }
+}
+console.log(arr);
+----------------------------------------------------------
+
+6.strings to title caps in a string 
+
+function toTitleCase(str) {
+  return str.toLowerCase().split(' ').map(function (word) {
+    return (word.charAt(0).toUpperCase() + word.slice(1));
+  }).join(' ');
+}
+console.log(toTitleCase("welcome to india"));
+----------------------------------------------------------
+
+7.Rotate an array elements
+arr= [1,2,3,4,5]
+function ar(arr, rev) {
+  if (rev) arr.unshift(arr.pop());
+  else arr.push(arr.shift());
+  return arr;
+}
+console.log(ar(arr))
+------------------------------------------------------------
+------------------------------------------------------------
+programs in arrow functions:
+
+1.Print odd numbers in an array
+
+let arr = [1,2,3,4,5,6,7,8,9,10,11,12]
+let z = arr.filter(n => n%2)
+console.log(z)
+----------------------------------------------------------
+
+2.convert string to title caps in a string 
+
+const str = "ar rahman productions";
+const z = str.split(' ').map(w => w[0].toUpperCase()+w.substring(1).toLowerCase()).join(' ');
+console.log(z);
+----------------------------------------------------------
+
+3.Sum of all numbers in an array
+
+const sum = [1,2,3,4,5,6].reduce((z,a) =>z+a,0);
+console.log(sum);
+----------------------------------------------------------
+
+4.Return all the prime numbers in an array
+
+a=[1,2,3,4,5,6,7]
+var z = a.filter((n) => {
+  for(var i=2;i<=Math.sqrt(n);i++) {
+    if(n % i === 0) return false;
+  }
+  return true;
+});
+console.log(z);
+----------------------------------------------------------
+
+5.Return all the palindromes in an array
+vlet arr = ["level", "oppo", "samsung", "rotar","civic"];
+let z = arr.filter(w => {
+  let len = w.length;
+  for (let i = 0; i < len / 2; i++) {
+    if (w[i] == w[len - i - 1]) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+});
+console.log(z)
